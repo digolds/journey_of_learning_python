@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>digwebs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="python web framework, digwebs web framework,open source web framework,write web service by digwebs"/>
+    <meta name="description" content="A tiny web framework called digwebs which is developed by Python."/>
+</head>
+<body>
+    <div id="main" class='uk-container uk-container-small uk-padding'>
+    <div class="uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
+	    {% for a in template_blogs %}
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">{{{{a.title}}}}</h3>
+                <p>{{{{a.description}}}}</p>
+                <a href="{{{{a.detail_link}}}}" class="uk-text-uppercase">Read articles ...</a>
+            </div>
+        </div>
+		{% endfor %}
+    </div>
+</div>
+    {% set static_file_prefix = 'https://cdn.jsdelivr.net/gh/digolds/digresources/' %}
+    <link rel="stylesheet" href="{{{{static_file_prefix}}}}/css/uikit.min.css">
+    <script src="{{{{static_file_prefix}}}}/js/jquery.min.js"></script>
+    <script src="{{{{static_file_prefix}}}}/js/uikit.min.js"></script>
+    <script src="{{{{static_file_prefix}}}}/js/uikit-icons.min.js"></script>
+</body>
+
+</html>

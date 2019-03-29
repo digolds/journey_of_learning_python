@@ -1,0 +1,3 @@
+[submodule "digwebs"]
+	path = digwebs
+	url = https://github.com/digolds/digwebs.git
