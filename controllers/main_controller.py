@@ -8,38 +8,10 @@ digwebs framework controller.
 
 from digwebs.web import current_app
 
+@current_app.view('home.html')
 @current_app.get('/')
 def hello_world():
-    return """
-<html>
-    <style>
-    html,body{
-  height:100%;
-  padding:0;
-  margin:0;
-}
-*{
-  box-sizing:border-box;
-}
-
-.container{
-  
-  width:100%;
-  height:100%;
-  
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  
-}
-    </style>
-    <body>
-    <div class="container">
-  <h1>digwebs - A Minimal Web Framework!</h1>
-  <a href="/views/blogs">Read more...</a>
-</div>
-</body></html>
-"""
+    return dict()
 
 @current_app.view('blogs.html')
 @current_app.get('/views/blogs')
